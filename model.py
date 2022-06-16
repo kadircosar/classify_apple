@@ -9,12 +9,10 @@ from torch.autograd import Variable
 from sklearn.model_selection import train_test_split
 import torchvision.transforms as T
 from torchvision.datasets import ImageFolder
-import cv2
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score
 import os
 from torchmetrics import ConfusionMatrix
-import argparse
 
 class DataPro:
     transforms_train = T.Compose([T.ToTensor(), T.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])])
